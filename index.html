@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[YOUR NAME] · Front-end Portfolio</title>
+<meta name="description" content="Portfolio of [YOUR NAME], a junior front-end developer building responsive websites with HTML, CSS and JavaScript.">
+<meta name="theme-color" content="#18151F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect x='1' y='1' width='6' height='6' fill='%23D33'/%3E%3Crect x='9' y='1' width='6' height='6' fill='%232A9D3C'/%3E%3Crect x='1' y='9' width='6' height='6' fill='%231E5FD1'/%3E%3Crect x='9' y='9' width='6' height='6' fill='%23E3B100'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Courier+Prime:wght@400;700&family=Noto+Sans+Georgian:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/sfx.js" defer></script>
+<script src="js/snake.js" defer></script>
+<script src="js/minesweeper.js" defer></script>
+<script src="js/player.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip btn95" href="#main">Skip to content</a>
+
+<div class="page">
+  <div class="stage" data-power="on">
+    <img class="computer" src="assets/computer.svg" alt="" aria-hidden="true" width="1440" height="900">
+
+    <!-- Monitor hardware (positioned over computer.svg) -->
+    <button class="hw hw-power" type="button" aria-label="Monitor power" aria-pressed="true" title="Power"></button>
+    <button class="hw hw-reset" type="button" aria-label="Restart" title="Restart"></button>
+    <span class="led" aria-hidden="true"></span>
+
+    <div class="screen">
+      <div class="os">
+        <div class="desktop" id="main">
+
+          <!-- ============ DESKTOP ICONS ============ -->
+          <nav class="icons" aria-label="Desktop">
+            <a class="ico" href="#skills">
+              <svg aria-hidden="true" width="52" height="52" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="1" width="10" height="14" fill="#fff" stroke="#000"/><rect x="5" y="4" width="6" height="1" fill="#000"/><rect x="5" y="6" width="6" height="1" fill="#000"/><rect x="5" y="8" width="6" height="1" fill="#000"/><rect x="5" y="10" width="4" height="1" fill="#000"/></svg>
+              <span>Skills</span>
+            </a>
+            <a class="ico" href="#projects">
+              <span class="pix-icon folder-swap" aria-hidden="true"><img class="closed" src="assets/icons/folder.png" width="32" height="27" alt=""><img class="open" src="assets/icons/folder-open.png" width="37" height="30" alt=""></span>
+              <span>Projects</span>
+            </a>
+            <a class="ico" href="#about">
+              <span class="pix-icon" aria-hidden="true"><img src="assets/icons/id-card.png" width="46" height="37" alt=""></span>
+              <span>About me</span>
+            </a>
+            <a class="ico" href="#contact">
+              <span class="pix-icon" aria-hidden="true"><img src="assets/icons/mail.png" width="32" height="24" alt=""></span>
+              <span>Contact</span>
+            </a>
+            <a class="ico" href="#games">
+              <span class="pix-icon" aria-hidden="true"><img src="assets/icons/gamepad.png" width="36" height="18" alt=""></span>
+              <span>Games</span>
+            </a>
+            <a class="ico" href="#player">
+              <span class="pix-icon" aria-hidden="true"><img class="smooth" src="assets/player/note.png" width="66" height="94" alt=""></span>
+              <span>WinPlayer</span>
+            </a>
+            <a class="ico" href="#recycle-bin">
+              <span class="pix-icon" aria-hidden="true"><img src="assets/icons/trash.png" width="27" height="33" alt=""></span>
+              <span>Recycle Bin</span>
+            </a>
+          </nav>
+
+          <!-- ============ WELCOME WINDOW ============ -->
+          <div class="welcome-area">
+            <section class="win welcome-win" data-window="welcome" aria-labelledby="t-welcome">
+              <div class="tbar">
+                <h2 id="t-welcome" tabindex="-1">welcome.exe</h2>
+                <span class="tbtns">
+                  <button class="tb" type="button" data-win="min" aria-label="Minimize"><b class="tb-min"></b></button>
+                  <button class="tb" type="button" data-win="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </span>
+              </div>
+              <div class="welcome">
+                <div class="sunken hero">
+                  <div class="hello">Hello, World!</div>
+                  <h1>I'm <span data-fill="name">[YOUR NAME]</span></h1>
+                  <p>Junior front-end developer from <span data-fill="city">[YOUR CITY]</span>. I build responsive websites with HTML, CSS and JavaScript.</p>
+                  <button class="now" type="button" id="now" title="Click for another one"><b>Currently:</b> <span id="now-text">turning coffee into CSS</span></button>
+                  <div class="actions">
+                    <a class="btn95 strong" href="#projects">View projects</a>
+                    <a class="btn95" href="#contact">Contact me</a>
+                  </div>
+                </div>
+                <div class="sunken terminal" aria-label="Terminal">
+                  <div>C:\&gt; whoami</div>
+                  <div data-fill="name">[YOUR NAME]</div>
+                  <div>&nbsp;</div>
+                  <div>C:\&gt; role</div>
+                  <div>front-end developer</div>
+                  <div>&nbsp;</div>
+                  <div>C:\&gt; stack</div>
+                  <div>html css js git</div>
+                  <div>&nbsp;</div>
+                  <div>C:\&gt; fortune</div>
+                  <div id="fortune">It works on my machine.</div>
+                  <div>&nbsp;</div>
+                  <div>C:\&gt; <span class="blink" aria-hidden="true">_</span></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- ============ GAMES FOLDER ============ -->
+            <section class="win games-win" data-window="games" aria-labelledby="t-games" hidden>
+              <div class="tbar">
+                <h2 id="t-games" tabindex="-1">C:\Games</h2>
+                <span class="tbtns">
+                  <button class="tb" type="button" data-win="min" aria-label="Minimize"><b class="tb-min"></b></button>
+                  <button class="tb" type="button" data-win="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </span>
+              </div>
+              <nav class="sunken games-body" aria-label="Games">
+                <a class="gico" href="#snake">
+                  <span class="pix-icon" aria-hidden="true"><svg aria-hidden="true" width="52" height="52" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="1" y="9" width="12" height="5" fill="#0E0B12"/><rect x="8" y="1" width="7" height="12" fill="#0E0B12"/><rect x="2" y="10" width="10" height="3" fill="#4FC23A"/><rect x="9" y="2" width="5" height="10" fill="#4FC23A"/><rect x="2" y="10" width="7" height="1" fill="#7EE04A"/><rect x="9" y="2" width="1" height="8" fill="#7EE04A"/><rect x="3" y="12" width="9" height="1" fill="#2E8B3A"/><rect x="13" y="4" width="1" height="8" fill="#2E8B3A"/><rect x="10" y="3" width="1" height="1" fill="#fff"/><rect x="12" y="3" width="1" height="1" fill="#fff"/><rect x="11" y="0" width="1" height="1" fill="#E5262E"/><rect x="2" y="3" width="4" height="4" fill="#0E0B12"/><rect x="3" y="4" width="2" height="2" fill="#E5262E"/></svg></span>
+                  <span>Snake</span>
+                </a>
+                <a class="gico" href="#mines">
+                  <span class="pix-icon" aria-hidden="true"><img src="assets/minesweeper/mine.png" width="48" height="48" alt=""></span>
+                  <span>Minesweeper</span>
+                </a>
+              </nav>
+              <div class="statusbar"><div class="sunken">2 object(s)</div></div>
+            </section>
+
+            <!-- ============ MINESWEEPER WINDOW ============ -->
+            <section class="win mines-win" data-window="mines" aria-labelledby="t-mines" hidden>
+              <div class="tbar">
+                <h2 id="t-mines" tabindex="-1">Minesweeper</h2>
+                <span class="tbtns">
+                  <button class="tb" type="button" data-win="min" aria-label="Minimize"><b class="tb-min"></b></button>
+                  <button class="tb" type="button" data-win="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </span>
+              </div>
+              <div class="ms-menu" role="group" aria-label="Difficulty">
+                <button class="btn95 ms-level" type="button" data-level="beginner" aria-pressed="true">Beginner</button>
+                <button class="btn95 ms-level" type="button" data-level="intermediate" aria-pressed="false">Intermediate</button>
+                <button class="btn95 ms-level" type="button" data-level="expert" aria-pressed="false">Expert</button>
+                <button class="btn95 ms-flagmode" type="button" id="ms-flagmode" aria-pressed="false" title="Clicks place flags instead of opening tiles">
+                  <img src="assets/minesweeper/flag.png" width="20" height="20" alt="">Flag mode
+                </button>
+                <button class="btn95 ms-sound" type="button" id="ms-sound" title="Sound effects (M)">Sound: On</button>
+              </div>
+              <div class="ms-frame">
+                <div class="sunken ms-head">
+                  <div class="ms-counter"><canvas id="ms-mines" aria-hidden="true"></canvas><span class="sr-only"></span></div>
+                  <button class="ms-face" type="button" id="ms-face" aria-label="New game"><img src="assets/minesweeper/face-smile.png" width="96" height="96" alt=""></button>
+                  <div class="ms-counter"><canvas id="ms-time" aria-hidden="true"></canvas></div>
+                </div>
+                <div class="ms-scroll">
+                  <div class="sunken ms-board" id="ms-board" aria-label="Minefield: arrow keys to move, Enter to open, F to flag"></div>
+                </div>
+              </div>
+              <div class="statusbar"><div class="sunken" id="ms-status">Beginner</div></div>
+              <p class="sr-only" id="ms-live" aria-live="polite"></p>
+            </section>
+
+            <!-- ============ SNAKE WINDOW ============ -->
+            <section class="win snake-win" data-window="snake" aria-labelledby="t-snake" hidden>
+              <div class="tbar">
+                <h2 id="t-snake" tabindex="-1">snake.exe</h2>
+                <span class="tbtns">
+                  <button class="tb" type="button" data-win="min" aria-label="Minimize"><b class="tb-min"></b></button>
+                  <button class="tb" type="button" data-win="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </span>
+              </div>
+              <div class="snake-body">
+                <div class="sunken snake-board" data-state="ready" tabindex="-1">
+                  <canvas id="snake-canvas" width="576" height="360" role="img" aria-label="Snake game board"></canvas>
+
+                  <div class="snake-overlay" data-for="ready">
+                    <p class="snake-title">SNAKE</p>
+                    <button class="pix-btn yellow" type="button" data-snake="start">START</button>
+                    <p class="snake-hint hint-keys">Arrow keys or WASD to move<br>Space to pause · M for sound</p>
+                    <p class="snake-hint hint-touch">Swipe or use the arrows<br>to move</p>
+                  </div>
+                  <div class="snake-overlay" data-for="paused">
+                    <p class="snake-title">PAUSED</p>
+                    <button class="pix-btn yellow" type="button" data-snake="resume">RESUME</button>
+                  </div>
+                  <div class="snake-overlay" data-for="over">
+                    <p class="game-over">GAME<br>OVER</p>
+                    <p class="snake-quip" id="snake-quip"></p>
+                    <p class="snake-final" id="snake-final">SCORE 0000</p>
+                    <button class="pix-btn green" type="button" data-snake="start">START</button>
+                  </div>
+                </div>
+
+                <aside class="snake-side" aria-label="Game controls">
+                  <div class="snake-stats">
+                    <div class="sunken snake-stat">
+                      <canvas data-sprite="apple" aria-hidden="true"></canvas>
+                      <span>Score</span>
+                      <b id="snake-score">0000</b>
+                    </div>
+                    <div class="sunken snake-stat">
+                      <canvas data-sprite="trophy" aria-hidden="true"></canvas>
+                      <span>Best</span>
+                      <b id="snake-best">0000</b>
+                    </div>
+                  </div>
+
+                  <div class="snake-keys">
+                    <button class="keycap up" type="button" data-dir="up" aria-label="Up"><svg aria-hidden="true" viewBox="0 0 8 8" shape-rendering="crispEdges"><path d="M3 1h2v1h1v1h1v1H5v3H3V4H1V3h1V2h1z"/></svg></button>
+                    <button class="keycap left" type="button" data-dir="left" aria-label="Left"><svg aria-hidden="true" viewBox="0 0 8 8" shape-rendering="crispEdges"><path d="M1 3v2h1v1h1v1h1V5h3V3H4V1H3v1H2v1z"/></svg></button>
+                    <button class="keycap down" type="button" data-dir="down" aria-label="Down"><svg aria-hidden="true" viewBox="0 0 8 8" shape-rendering="crispEdges"><path d="M3 7h2V6h1V5h1V4H5V1H3v3H1v1h1v1h1z"/></svg></button>
+                    <button class="keycap right" type="button" data-dir="right" aria-label="Right"><svg aria-hidden="true" viewBox="0 0 8 8" shape-rendering="crispEdges"><path d="M7 3v2H6v1H5v1H4V5H1V3h3V1h1v1h1v1z"/></svg></button>
+                  </div>
+
+                  <div class="snake-btns">
+                    <button class="btn95" type="button" id="snake-pause" data-snake="pause" disabled>Pause</button>
+                    <button class="btn95" type="button" id="snake-sound" data-snake="sound" title="Sound effects (M)">Sound: On</button>
+                  </div>
+                  <p class="snake-legend">
+                    <canvas data-sprite="apple" aria-hidden="true"></canvas> 10
+                    <canvas data-sprite="cherry" aria-hidden="true"></canvas> 30
+                    <canvas data-sprite="star" aria-hidden="true"></canvas> 50
+                  </p>
+                  <p class="sr-only" id="snake-live" aria-live="polite"></p>
+                </aside>
+              </div>
+            </section>
+
+            <!-- ============ WINPLAYER WINDOW ============ -->
+            <!-- The player body is the asset image (assets/player/body.png, 982×584);
+                 every control is placed on it in % of that image. -->
+            <section class="player-win" data-window="player" data-state="stopped" aria-labelledby="t-player" hidden>
+              <div class="pl-body">
+                <div class="pl-titlebar">
+                  <span class="pl-appicon" aria-hidden="true"><svg viewBox="0 0 12 12" shape-rendering="crispEdges"><path d="M0 1h12v10H0z" fill="#0E0B12"/><path d="M1 2h4v4H1z" fill="#C8333B"/><path d="M6 2h5v4H6z" fill="#3A8F58"/><path d="M1 7h10v3H1z" fill="#9AA0AA"/><path d="M2 3h1v1H2zM8 3h1v2H8z" fill="#fff"/></svg></span>
+                  <h2 id="t-player" tabindex="-1">WinPlayer 2.0</h2>
+                  <button class="pl-tb pl-tb-min" type="button" data-win="min" aria-label="Minimize"></button>
+                  <button class="pl-tb pl-tb-max" type="button" data-pl="size" aria-label="Maximize player"></button>
+                  <button class="pl-tb pl-tb-close" type="button" data-win="close" aria-label="Close"></button>
+                </div>
+
+                <div class="pl-lcd">
+                  <canvas id="pl-lcd" width="960" height="384" aria-hidden="true"></canvas>
+                  <button class="pl-timebtn" type="button" aria-label="Show remaining time"></button>
+                </div>
+                <input class="pl-range pl-seek" id="pl-seek" type="range" min="0" max="1000" value="0" aria-label="Seek">
+
+                <div class="pl-panel pl-p1">
+                  <ol id="pl-playlist" aria-label="Playlist"></ol>
+                </div>
+                <div class="pl-panel pl-p2">
+                  <img class="pl-speaker" src="assets/player/speaker.png" width="96" height="86" alt="">
+                  <input class="pl-range pl-groove" id="pl-volume" type="range" min="0" max="100" value="70" aria-label="Volume">
+                </div>
+                <div class="pl-panel pl-p3">
+                  <input class="pl-range pl-groove" id="pl-balance" type="range" min="-100" max="100" step="5" value="0" aria-label="Balance">
+                  <span class="pl-lr" aria-hidden="true"><b>L</b><b>R</b></span>
+                </div>
+
+                <button class="pl-btn pl-prev" type="button" data-pl="prev" aria-label="Previous track"></button>
+                <button class="pl-btn pl-play" type="button" data-pl="play" aria-label="Play"></button>
+                <button class="pl-btn pl-pause" type="button" data-pl="pause" aria-label="Pause"></button>
+                <button class="pl-btn pl-stop" type="button" data-pl="stop" aria-label="Stop"></button>
+                <button class="pl-btn pl-next" type="button" data-pl="next" aria-label="Next track"></button>
+                <button class="pl-toggle pl-shuf" type="button" data-pl="shuffle" aria-pressed="false" aria-label="Shuffle"><span aria-hidden="true">SHUF</span><i aria-hidden="true"></i></button>
+                <button class="pl-toggle pl-rep" type="button" data-pl="repeat" aria-pressed="false" aria-label="Repeat track"><span aria-hidden="true">REP</span><i aria-hidden="true"></i></button>
+                <button class="pl-btn pl-eject" type="button" data-pl="eject" aria-label="Open an audio file"></button>
+                <button class="pl-grip" type="button" aria-label="Resize player: drag, or use the arrow keys" title="Drag to resize"></button>
+              </div>
+              <input type="file" id="pl-file" accept="audio/*" hidden>
+              <p class="sr-only" id="pl-live" aria-live="polite"></p>
+            </section>
+          </div>
+
+          <!-- ============ EXPLORER WINDOW ============ -->
+          <div class="win explorer" data-window="explorer" hidden>
+            <div class="tbar">
+              <span>C:\Portfolio\</span>
+              <span class="tbtns">
+                <button class="tb" type="button" data-win="min" aria-label="Minimize"><b class="tb-min"></b></button>
+                <button class="tb" type="button" data-win="max" aria-label="Maximize"><b class="tb-max"></b></button>
+                <button class="tb" type="button" data-win="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </span>
+            </div>
+
+            <div class="addr">
+              <span>Address</span>
+              <div class="sunken field" id="address" aria-live="polite">C:\Portfolio\Skills</div>
+            </div>
+
+            <div class="win-body">
+              <nav class="sunken folders" aria-label="Sections">
+                <div class="folders-label">Folders</div>
+                <a class="tree" href="#welcome">
+                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="1" y="2" width="14" height="9" fill="#C0C0C0" stroke="#000"/><rect x="3" y="4" width="10" height="5" fill="#0A0A80"/><rect x="5" y="12" width="6" height="2" fill="#808080"/><rect x="3" y="14" width="10" height="1" fill="#000"/></svg>
+                  Welcome
+                </a>
+                <a class="tree" href="#skills">
+                  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="1" width="10" height="14" fill="#fff" stroke="#000"/><rect x="5" y="4" width="6" height="1" fill="#000"/><rect x="5" y="6" width="6" height="1" fill="#000"/><rect x="5" y="8" width="6" height="1" fill="#000"/><rect x="5" y="10" width="4" height="1" fill="#000"/></svg>
+                  Skills
+                </a>
+                <a class="tree" href="#projects">
+                  <span class="pix-icon folder-swap" aria-hidden="true"><img class="closed" src="assets/icons/folder.png" width="32" height="27" alt=""><img class="open" src="assets/icons/folder-open.png" width="37" height="30" alt=""></span>
+                  Projects
+                </a>
+                <a class="tree" href="#about">
+                  <span class="pix-icon" aria-hidden="true"><img src="assets/icons/id-card.png" width="46" height="37" alt=""></span>
+                  About me
+                </a>
+                <a class="tree" href="#contact">
+                  <span class="pix-icon" aria-hidden="true"><img src="assets/icons/mail.png" width="32" height="24" alt=""></span>
+                  Contact
+                </a>
+              </nav>
+
+              <main class="content">
+
+                <!-- ============ SKILLS ============ -->
+                <section class="card panel" data-key="skills" data-label="Skills" data-task="skills.exe" data-status="1 object(s) selected" aria-labelledby="t-skills" hidden>
+                  <h2 class="tbar" id="t-skills" tabindex="-1">skills.exe</h2>
+                  <div class="panel-body grid skills">
+                    <fieldset>
+                      <legend>Languages</legend>
+                      <div class="skill">
+                        <div class="skill-row"><span>HTML5</span><span>8/10</span></div>
+                        <div class="sunken bar" aria-hidden="true"><div style="--v: 80%"></div></div>
+                      </div>
+                      <div class="skill">
+                        <div class="skill-row"><span>CSS3</span><span>7/10</span></div>
+                        <div class="sunken bar" aria-hidden="true"><div style="--v: 70%"></div></div>
+                      </div>
+                      <div class="skill">
+                        <div class="skill-row"><span>JavaScript</span><span>6/10</span></div>
+                        <div class="sunken bar" aria-hidden="true"><div style="--v: 60%"></div></div>
+                      </div>
+                    </fieldset>
+
+                    <fieldset>
+                      <legend>Tools</legend>
+                      <ul class="checks">
+                        <li><span class="sunken box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12"><polyline points="1,6 4.5,9.5 11,2" fill="none" stroke="#000" stroke-width="2"/></svg></span>Git &amp; GitHub</li>
+                        <li><span class="sunken box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12"><polyline points="1,6 4.5,9.5 11,2" fill="none" stroke="#000" stroke-width="2"/></svg></span>VS Code</li>
+                        <li><span class="sunken box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12"><polyline points="1,6 4.5,9.5 11,2" fill="none" stroke="#000" stroke-width="2"/></svg></span>DevTools</li>
+                        <li><span class="sunken box" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 12 12"><polyline points="1,6 4.5,9.5 11,2" fill="none" stroke="#000" stroke-width="2"/></svg></span>Responsive</li>
+                      </ul>
+                    </fieldset>
+
+                    <fieldset>
+                      <legend>Installing...</legend>
+                      <ul class="checks">
+                        <li><span class="sunken box" aria-hidden="true"></span>React</li>
+                        <li><span class="sunken box" aria-hidden="true"></span>TypeScript</li>
+                        <li><span class="sunken box" aria-hidden="true"></span>Tailwind CSS</li>
+                      </ul>
+                      <p class="eta">ETA: 3 more coffees</p>
+                    </fieldset>
+                  </div>
+                </section>
+
+                <!-- ============ PROJECTS ============ -->
+                <section class="card panel" data-key="projects" data-label="Projects" data-task="Projects" data-status="3 object(s)" aria-labelledby="t-projects" hidden>
+                  <h2 class="tbar" id="t-projects" tabindex="-1">Projects</h2>
+                  <div class="panel-body grid projects">
+
+                    <article class="card project">
+                      <div class="tbar small"><span>project_1.exe</span></div>
+                      <div class="project-body">
+                        <div class="sunken shot">[Project 1 screenshot]</div>
+                        <h3>[Project name]</h3>
+                        <p>[One or two sentences about what it does.]</p>
+                        <div class="sunken tags">HTML · CSS · JS</div>
+                        <div class="actions">
+                          <a class="btn95 strong" href="#">Open</a>
+                          <a class="btn95" href="#">Source</a>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="card project">
+                      <div class="tbar small"><span>project_2.exe</span></div>
+                      <div class="project-body">
+                        <div class="sunken shot">[Project 2 screenshot]</div>
+                        <h3>[Project name]</h3>
+                        <p>[One or two sentences about what it does.]</p>
+                        <div class="sunken tags">HTML · CSS · JS</div>
+                        <div class="actions">
+                          <a class="btn95 strong" href="#">Open</a>
+                          <a class="btn95" href="#">Source</a>
+                        </div>
+                      </div>
+                    </article>
+
+                    <article class="card project">
+                      <div class="tbar small"><span>project_3.exe</span></div>
+                      <div class="project-body">
+                        <div class="sunken shot">[Project 3 screenshot]</div>
+                        <h3>[Project name]</h3>
+                        <p>[One or two sentences about what it does.]</p>
+                        <div class="sunken tags">HTML · CSS · JS</div>
+                        <div class="actions">
+                          <a class="btn95 strong" href="#">Open</a>
+                          <a class="btn95" href="#">Source</a>
+                        </div>
+                      </div>
+                    </article>
+
+                  </div>
+                </section>
+
+                <!-- ============ ABOUT ============ -->
+                <section class="card panel" data-key="about" data-label="About me" data-task="about_me.txt" data-status="1 object(s) selected" aria-labelledby="t-about" hidden>
+                  <h2 class="tbar" id="t-about" tabindex="-1">about_me.txt - Notepad</h2>
+                  <div class="menubar" aria-hidden="true"><span>File</span><span>Edit</span><span>Search</span><span>Help</span></div>
+                  <div class="sunken panel-body notepad">
+                    <p>[Write 2–3 sentences about yourself: how you started coding, what you enjoy building, and what kind of team or project you want to join.]</p>
+                    <p>[Add a line about hobbies or favorite games. A personal touch makes you memorable.]<span class="blink" aria-hidden="true">|</span></p>
+                  </div>
+                </section>
+
+                <!-- ============ CONTACT ============ -->
+                <section class="card panel" data-key="contact" data-label="Contact" data-task="Question" data-status="1 object(s) selected" aria-labelledby="t-contact" hidden>
+                  <h2 class="tbar" id="t-contact" tabindex="-1">Question</h2>
+                  <div class="panel-body dialog">
+                    <div class="dialog-msg">
+                      <span class="qmark" aria-hidden="true">?</span>
+                      <div class="dialog-text">
+                        <p class="dialog-q">Would you like to hire a front-end developer?</p>
+                        <p>Write to me and let's build something together.</p>
+                        <div class="sunken email" data-fill="email">[YOUR EMAIL]</div>
+                      </div>
+                    </div>
+                    <div class="dialog-actions">
+                      <a class="btn95 strong default sparkly" data-link="email" href="mailto:">Yes<span class="sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></a>
+                      <a class="btn95" data-link="github" href="#">GitHub</a>
+                      <a class="btn95" data-link="linkedin" href="#">LinkedIn</a>
+                      <button class="btn95" type="button" id="no-btn">No</button>
+                    </div>
+                  </div>
+                </section>
+
+              </main>
+            </div>
+
+            <div class="statusbar">
+              <div class="sunken" id="status">1 object(s) selected</div>
+              <div class="sunken">&copy; <span id="year">2026</span> <span data-fill="name">[YOUR NAME]</span></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="taskbar">
+          <div class="start-wrap">
+            <button class="btn95 start" type="button" aria-expanded="false" aria-controls="start-menu" title="Click here to begin. That's where the fun is.">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="1" y="1" width="6" height="6" fill="#D33"/><rect x="9" y="1" width="6" height="6" fill="#2A9D3C"/><rect x="1" y="9" width="6" height="6" fill="#1E5FD1"/><rect x="9" y="9" width="6" height="6" fill="#E3B100"/></svg>
+              Start
+            </button>
+            <nav class="start-menu win" id="start-menu" aria-label="Start menu" hidden>
+              <div class="start-side" aria-hidden="true">Portfolio<b>95</b></div>
+              <ul>
+                <li><a href="#welcome">Welcome</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About me</a></li>
+                <li class="sep" aria-hidden="true"></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#player">WinPlayer</a></li>
+                <li class="sep" aria-hidden="true"></li>
+                <li><a href="#contact">Contact...</a></li>
+              </ul>
+            </nav>
+          </div>
+          <button class="task" id="task" type="button" aria-pressed="true">welcome.exe</button>
+          <span class="sunken tray"><a class="tray-music" id="tray-music" href="#player" aria-label="Music playing: open WinPlayer" title="WinPlayer" hidden><img src="assets/player/note.png" width="66" height="94" alt=""></a><time id="clock">12:00</time></span>
+        </footer>
+
+        <!-- ============ 404: BLUE SCREEN ============ -->
+        <section class="bsod" id="bsod" aria-labelledby="bsod-title" hidden>
+          <div class="bsod-inner">
+            <h2 class="bsod-title" id="bsod-title">Portfolio 95</h2>
+            <p>A fatal exception 404 has occurred at <span id="bsod-path">C:\Portfolio\</span>. <span id="bsod-reason">The page you are looking for has been moved, deleted, or was never written in the first place.</span></p>
+            <ul>
+              <li>Press any key to return to the desktop.</li>
+              <li>Press CTRL+ALT+DEL to restart your computer. You will lose all unsaved coffee.</li>
+            </ul>
+            <p>Error: PAGE_NOT_FOUND (0x00000404)</p>
+            <button class="bsod-continue" type="button">Press any key to continue <span class="blink" aria-hidden="true">_</span></button>
+          </div>
+        </section>
+      </div>
+
+      <div class="boot" aria-hidden="true" hidden>
+        <p>Portfolio95 BIOS v1.0</p>
+        <p id="boot-1">Memory test: 640K OK</p>
+        <p id="boot-2">Loading C:\Portfolio\ ...</p>
+        <p>Starting Portfolio 95<span class="blink">_</span></p>
+        <img class="boot-hourglass" src="assets/cursors/hourglass-big.png" width="48" height="80" alt="">
+      </div>
+
+      <div class="crt" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
