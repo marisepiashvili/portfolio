@@ -282,6 +282,20 @@ button.tb:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
   100% { transform: none; filter: none; }
 }
 @keyframes os-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* Windows open with a short grow-in instead of popping up */
+[data-window] {
+  transform-origin: 50% 60%;
+  animation: win-open 0.26s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+@keyframes win-open { from { opacity: 0; transform: translateY(10px) scale(0.94); } }
+
+/* Start-up: the screen stays dark until fonts and wallpaper are in, so nothing
+   reflows in view; then the desktop fades in and the window opens just after */
+html.is-loading .stage[data-power] .os { visibility: hidden; animation: none; }
+html.is-loading [data-window],
+.stage:not([data-power="on"]) [data-window] { animation: none; }
+html.is-starting [data-window] { animation-delay: 0.22s; }
 @keyframes appear { to { opacity: 1; } }
 
 /* Boot screen shown while the monitor starts */
@@ -657,7 +671,7 @@ button.tb:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
 .projects {
   padding: 8px;
   gap: 8px;
-  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  grid-template-columns: repeat(3, minmax(min(150px, 100%), 1fr));
 }
 
 fieldset {
@@ -1529,7 +1543,7 @@ a.shot:hover img { transform: scale(1.03); }
 
 @media (prefers-reduced-motion: reduce) {
   .blink { animation: none; }
-  .os, .boot, .boot p, .boot-hourglass { animation: none !important; }
+  .os, .boot, .boot p, .boot-hourglass, [data-window] { animation: none !important; }
   .boot p { opacity: 1; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
 }

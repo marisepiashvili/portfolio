@@ -2,9 +2,9 @@
    Your details — edit these once and they fill the whole site.
    ========================================================= */
 const CONFIG = {
-  name: '[YOUR NAME]',
-  city: '[YOUR CITY]',
-  email: '[YOUR EMAIL]',
+  name: 'Sepa',
+  city: 'Georgia 🇬🇪',
+  email: 'marisepiashvili17@gmail.com',
   github: '#',   // e.g. 'https://github.com/your-username'
   linkedin: '#', // e.g. 'https://www.linkedin.com/in/your-profile'
 };
@@ -66,8 +66,20 @@ const FUN = {
 
 const pick = (list) => list[Math.floor(Math.random() * list.length)];
 
-// The hourglass cursor shows until everything (images, fonts) has loaded
-window.addEventListener('load', () => document.documentElement.classList.remove('is-loading'));
+// The hourglass cursor (and a dark screen) show until everything (images, fonts)
+// has loaded; then the desktop fades in and the window opens. is-starting delays
+// that first window a moment, and is dropped again so later windows open at once.
+function startUp() {
+  const root = document.documentElement;
+  if (!root.classList.contains('is-loading')) return;
+  root.classList.add('is-starting');
+  root.classList.remove('is-loading');
+  setTimeout(() => root.classList.remove('is-starting'), 800);
+}
+window.addEventListener('load', () => {
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(startUp, startUp);
+});
+setTimeout(startUp, 5000); // never keep the screen dark on a very slow connection
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ---------- Fill personal details ---------- */
@@ -350,6 +362,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let bootTimer;
 
   function setPower(state) { // 'on' | 'off' | 'boot'
+    if (state === 'on' && stage.dataset.power !== 'on') {
+      // after a boot: desktop first, then the window opens (same as the first load)
+      document.documentElement.classList.add('is-starting');
+      setTimeout(() => document.documentElement.classList.remove('is-starting'), 800);
+    }
     stage.dataset.power = state;
     powerBtn.setAttribute('aria-pressed', String(state !== 'off'));
     os.inert = state !== 'on';
